@@ -1,0 +1,374 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    /* <uniquifier>: Use a unique and descriptive class name
+       <weight>: Use a value from 400 to 700 */
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    overflow: scroll;
+    width: 100vw;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* - HEADER */
+
+header li {
+    display: block;
+    list-style: none;
+    height: 60px;
+}
+
+/* -- NAVBAR */
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+    height: 60px;
+}
+
+.navbar {
+    background-color: #e9f1f7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    right: 0;
+    min-width: 100%;
+    border-bottom: solid #c7ddee 2px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    padding: 0 25px;
+    height: 100%;
+}
+
+.navbar li, a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #131b23;
+    list-style-type: none;
+}
+
+.navbar li:hover {
+    transition: 0.5s;
+    color: #3497d1;
+}
+
+/* --- NAVBAR DROPDOWNS */
+
+.dropdown {
+    position: relative;
+    height: 100%;
+    width: 137px;
+    margin: auto;
+}
+
+.dropdown li {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #c7ddee;
+    width: 137px;
+    z-index: 1;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+/* -- HEADER IMG */
+
+#banner-conteiner {
+    position: relative;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+#banner {
+    filter: brightness(30%);
+    width: 95%;
+    max-width: 100%;
+}
+
+#banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#banner-text p {
+    font-size: 25px;
+    text-align: center;
+}
+
+/* MAIN */
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.anuncio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #2274a5;
+    width: 95%;
+    min-height: 100px;
+    color: #131b23;
+}
+
+.anuncio h3 {
+    color: rgb(215, 204, 241);
+}
+
+#anuncio-bxleft {
+    padding: 5px 15px;
+    width: 370px;
+}
+
+#anuncio-bxright {
+    display: flex;
+    align-items: center;
+    width: 370px;
+    text-align: right;
+    padding: 5px 15px;
+}
+
+.adv-content {
+    width: 95%;
+}
+
+.adv-content-about {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.adv-content-about img {
+    margin: 0 20px 10px 20px;
+    border-radius: 15px;
+    width: 250px;
+    max-width: 300px;
+    height: auto;
+
+}
+
+.about-textbox {
+    width: 600px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.about-textbox h2 {
+    font-size: 30px;
+}
+
+/* - MAIN FORM */
+
+#main-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(100, 100, 100);
+}
+
+#main-form h1 {
+    padding: 0.5em;
+    text-align: center;
+    color: #131b23;
+}
+
+#main-form input[type=text], #main-form input[type=date] {
+    height: 30px;
+    padding: 2px 15px;
+    border-radius: 15px;
+    border: solid hsl(0, 0%, 68%) 1px;
+}
+
+#form-content {
+    display: flex;
+    align-items: center;
+    border: solid #a4aeb8 1px;
+    border-radius: 15px;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+}
+
+.form-column {
+    display: flex;
+    justify-content: space-between;
+}
+
+#form-submit,
+#form-reset {
+    margin: 10px;
+    width: 115px;
+    height: 35px;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#form-submit {
+    background-color: hsl(120, 60%, 62%);
+    border: solid hsl(146, 46%, 52%) 2px;
+}
+
+#form-reset {
+    background-color: hsl(0, 63%, 54%);
+    border: solid hsl(354, 42%, 42%) 2px;
+}
+
+/* - LISTA */
+
+.lista {
+    border: solid #a4aeb8 2px;
+    margin: 15px 15px;
+    padding: 5px;
+}
+
+.lista .th-row {
+    background-color: #8da0b4;
+}
+
+.lista .td-row {
+    background-color: #eeeeee;
+}
+
+.lista th, td {
+    padding: 0.3em 0.5em;
+    max-width: 500px;
+}
+
+.lista form {
+    display: inline-block;
+}
+
+.del, .upd {
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.del {
+    background-color: hsl(0, 54%, 44%);
+    color: rgb(243, 222, 222);
+}
+
+.del:hover {
+    background-color: hsl(0, 66%, 55%);
+}
+
+.upd {
+    background-color: hsl(61, 61%, 51%);
+    color: rgb(61, 50, 37);
+}
+
+.upd:hover {
+    background-color: hsl(61, 66%, 55%);
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #131b23;
+    font-size: 12px;
+}
+
+footer a,
+li {
+    text-decoration: underline;
+    list-style: none;
+    color: white;
+}
+
+footer hr {
+    margin: 15px 80px;
+    height: 1px;
+    border: none;
+    background-color: #cccccc;
+}
+
+footer p {
+    padding-bottom: 10px;
+}
+
+.footer-top {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left-con,
+.footer-right-con {
+    padding: 0 50px;
+}
